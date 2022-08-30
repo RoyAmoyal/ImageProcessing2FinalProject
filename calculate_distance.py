@@ -112,10 +112,17 @@ class App:
                     # print("THE total X:", total_x, "THE total Y:",total_y)
                     total_x_direction = "left" if total_x>0 else "right"
                     curr_x_direction =  "left" if tx>0 else "right"
+
+                    total_y_direction = "up" if total_y > 0 else "down"
+                    curr_y_direction = "up" if ty > 0 else "down"
+
                     draw_str(vis_dip, (20, 30), 'Total X translation : ' + str(round(total_x,1)) +" " +
-                             total_x_direction +'    Total Y translation : ' +  str(round(total_y,1)),font_scale=2.0)
+                             total_x_direction +'    Total Y translation : ' +  str(round(total_y,1))
+                             + " " + total_y_direction
+                             ,font_scale=2.0)
                     draw_str(vis_dip, (70, 60), 'Current X translation : ' + str(round(tx,2)) + " to the "+ curr_x_direction+
-                             '                          Current Y translation : ' +  str(round(ty,2)),font_scale=1.2,thickness=1)
+                             '                          Current Y translation : ' +  str(round(ty,2)) + " to the " +
+                                                        curr_y_direction ,font_scale=1.2,thickness=1)
 
 
 
